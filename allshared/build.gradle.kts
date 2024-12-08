@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kmmbridge)
@@ -28,6 +30,7 @@ kotlin {
 
 kmmbridge {
     gitHubReleaseArtifacts()
+    buildType.setAndFinalize(NativeBuildType.DEBUG)
     spm(swiftToolVersion = "5.8") {
         iOS { v("14") }
     }
