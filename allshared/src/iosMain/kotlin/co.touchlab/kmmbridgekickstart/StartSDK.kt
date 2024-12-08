@@ -9,4 +9,4 @@ fun startSDK(analytics: Analytics): SDKHandle {
     )
 }
 
-fun sayHello() = "Hello from Kotlin!"
+fun sayHello() = "Hello again from Kotlin!"
