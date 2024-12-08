@@ -2,8 +2,8 @@
 import PackageDescription
 
 // BEGIN KMMBRIDGE VARIABLES BLOCK (do not edit)
-let remoteKotlinUrl = "https://api.github.com/repos/touchlab/KMMBridgeDevFlowTest/releases/assets/211930762.zip"
-let remoteKotlinChecksum = "412b6b9be4ba9e2548ec3f14a11eafd9f83686fdb04b3b7c5b86306c771ba311"
+let remoteKotlinUrl = "https://api.github.com/repos/touchlab/KMMBridgeDevFlowTest/releases/assets/211952769.zip"
+let remoteKotlinChecksum = "e913db1d5c8d44657391c34325e75d8b750a070bbb49d9ef4960b616f1ba396f"
 let packageName = "allshared"
 // END KMMBRIDGE BLOCK
 
