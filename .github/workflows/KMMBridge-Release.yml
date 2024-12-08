@@ -54,7 +54,7 @@ jobs:
           tag_name: ${{ steps.versionPropertyValue.outputs.propVal }}
 
       - name: Build Main
-        run: ./gradlew publishKotlinMultiplatformPublicationToGitHubPackagesRepository publishAndroidDebugPublicationToGitHubPackagesRepository publishAndroidReleasePublicationToGitHubPackagesRepository kmmBridgePublish -PENABLE_PUBLISHING=true -PGITHUB_ARTIFACT_RELEASE_ID=${{ steps.devrelease.outputs.id }} -PGITHUB_PUBLISH_TOKEN=${{ secrets.GITHUB_TOKEN }} -PGITHUB_REPO=${{ github.repository }} --no-daemon --info --stacktrace
+        run: ./gradlew publishKotlinMultiplatformPublicationToGitHubPackagesRepository publishAndroidDebugPublicationToGitHubPackagesRepository publishAndroidReleasePublicationToGitHubPackagesRepository kmmBridgePublish -Porg.gradle.configuration-cache=false -PENABLE_PUBLISHING=true -PGITHUB_ARTIFACT_RELEASE_ID=${{ steps.devrelease.outputs.id }} -PGITHUB_PUBLISH_TOKEN=${{ secrets.GITHUB_TOKEN }} -PGITHUB_REPO=${{ github.repository }} --no-daemon --info --stacktrace
         env:
           GRADLE_OPTS: -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8 -XX:MaxMetaspaceSize=512m"
 
