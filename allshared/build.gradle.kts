@@ -30,7 +30,6 @@ kotlin {
 
 kmmbridge {
     gitHubReleaseArtifacts()
-    buildType.setAndFinalize(NativeBuildType.DEBUG)
     spm(swiftToolVersion = "5.8") {
         iOS { v("14") }
     }
